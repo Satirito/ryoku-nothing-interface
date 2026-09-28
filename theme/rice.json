@@ -1,0 +1,116 @@
+{
+  "schema": 1,
+  "slug": "nothing-interface",
+  "name": "Nothing Interface",
+  "author": "Ivan",
+  "blurb": "Charcoal island bar and modular Nothing OS-inspired desktop widgets. No wallpaper is included.",
+  "tags": [
+    "dark",
+    "monochrome",
+    "red-accent",
+    "no-wallpaper"
+  ],
+  "createdWith": "0.75.3",
+  "color": {
+    "mode": "fixed",
+    "palette": "palette.json",
+    "themeApps": false
+  },
+  "assets": {},
+  "look": {
+    "shell": {
+      "fontFamily": "Noto Sans",
+      "qsbar": {
+        "aiTools": "claude,codex,opencode",
+        "audioBoost": false,
+        "barAnim": 0,
+        "barAutoHide": false,
+        "barBorderEnabled": false,
+        "barColor": "foreground",
+        "barCornerRadius": 20,
+        "barFrostEnabled": false,
+        "barGapBottom": 0,
+        "barGapLeft": 8,
+        "barGapRight": 8,
+        "barGapTop": 8,
+        "barPosition": "top",
+        "barScale": 1,
+        "barSeps": [],
+        "barShadowEnabled": false,
+        "barShellStyle": "islands",
+        "barTemperatureSource": "cpu",
+        "iconOnlyGids": [],
+        "launcherLogoMode": "icon",
+        "layout": {
+          "center": [
+            "clock",
+            "media"
+          ],
+          "left": [
+            "launcher",
+            "workspaces",
+            "cpu",
+            "volume",
+            "memory",
+            "ai",
+            "cputemp"
+          ],
+          "right": [
+            "quick",
+            "network",
+            "power",
+            "layout",
+            "battery",
+            "brightness",
+            "storage",
+            "gpu",
+            "bluetooth",
+            "status",
+            "nothing-status"
+          ],
+          "version": 1
+        },
+        "panelTooltipBorderEnabled": true,
+        "pickerStyle": "tanzaku",
+        "widgetColorStyles": "-",
+        "widgetGeom": {},
+        "widgets": {
+          "battery": false,
+          "bluetooth": false,
+          "brightness": false,
+          "claude": false,
+          "cpu": true,
+          "cpuTemperature": true,
+          "gpu": false,
+          "layout": true,
+          "media": true,
+          "memory": true,
+          "mpris": true,
+          "network": true,
+          "power": false,
+          "quick": false,
+          "status": true,
+          "storage": false,
+          "volume": true,
+          "weather": true
+        },
+        "workspaceMode": "active",
+        "workspaceStyle": "rings"
+      },
+      "theme": {
+        "theme": "nothing-interface"
+      }
+    },
+    "widgets": {
+      "clockEnabled": true,
+      "clockDesign": "digital",
+      "clockAccent": "mono",
+      "clockBg": "none",
+      "clockColor": "#FFFFFF",
+      "clockScale": 1.15,
+      "widgetFont": "Noto Sans",
+      "statsEnabled": false,
+      "musicEnabled": false
+    }
+  }
+}
