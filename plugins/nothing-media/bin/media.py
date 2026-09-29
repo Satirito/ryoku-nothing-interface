@@ -16,6 +16,7 @@ def read(argv):
 
 status = read(['playerctl', 'status'])
 metadata = read(['playerctl', 'metadata', '--format', '{{title}}\n{{artist}}'])
+art_url = read(['playerctl', 'metadata', '--format', '{{mpris:artUrl}}'])
 lines = metadata.splitlines()
 try:
     position = max(0.0, float(read(['playerctl', 'position'])))
@@ -30,6 +31,7 @@ print(json.dumps({
     'available': status in ('Playing', 'Paused'),
     'title': lines[0][:80] if lines else '',
     'artist': lines[1][:60] if len(lines) > 1 else '',
+    'artUrl': art_url if status in ('Playing', 'Paused') else '',
     'position': position,
     'length': length,
 }, ensure_ascii=False))

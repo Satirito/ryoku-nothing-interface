@@ -1,8 +1,8 @@
 {
   "id": "nothing-media",
   "name": "Nothing Media",
-  "version": "0.2.0",
-  "author": "Ivan \u003c254410104+venchik111@users.noreply.github.com\u003e",
+  "version": "0.3.2",
+  "author": "Ivan <254410104+venchik111@users.noreply.github.com>",
   "description": "Nothing OS-style media tile with local MPRIS playback control.",
   "license": "MIT",
   "official": false,
@@ -13,7 +13,11 @@
     "main": "service/Main.qml",
     "content": "content/Widget.qml"
   },
-  "files": ["bin/media.py", "assets/preview-widget.png", "assets/preview-widget.svg"],
+  "files": [
+    "bin/media.py",
+    "assets/preview-widget.png",
+    "assets/preview-widget.svg"
+  ],
   "capabilities": {
     "densities": [
       "compact",
@@ -23,10 +27,15 @@
   "defaults": {
     "host": "desktopWidget",
     "label": "Nothing Media",
-    "desktopWidget": { "bg": "none" }
+    "desktopWidget": {
+      "bg": "none"
+    }
   },
   "dependencies": {
-    "commands": ["python3", "playerctl"]
+    "commands": [
+      "python3",
+      "playerctl"
+    ]
   },
   "metadata": {
     "settings": []

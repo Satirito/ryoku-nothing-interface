@@ -9,14 +9,17 @@ Item {
     property real s: 1
     property real widthBudget: 0
 
-    implicitWidth: 236 * s
-    implicitHeight: 236 * s
+    // Two cells on the Nothing Interface desktop grid (120px cells, 16px gap).
+    implicitWidth: 256 * s
+    implicitHeight: 256 * s
     width: implicitWidth
     height: implicitHeight
 
     Canvas {
         id: dial
-        anchors.fill: parent
+        width: 236 * root.s
+        height: 236 * root.s
+        anchors.centerIn: parent
         antialiasing: true
         onPaint: {
             const ctx = getContext("2d")

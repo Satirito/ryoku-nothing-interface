@@ -1,7 +1,7 @@
 {
   "id": "nothing-screen-time",
   "name": "Nothing Screen Time",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "author": "Ivan \u003c254410104+venchik111@users.noreply.github.com\u003e",
   "description": "Dotted readout of Ryoku's existing screen-time total for today.",
   "license": "MIT",

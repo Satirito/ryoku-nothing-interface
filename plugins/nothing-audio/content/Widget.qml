@@ -12,15 +12,17 @@ Item {
     readonly property bool muted: service ? service.data.muted === true : false
     readonly property int volume: service ? Number(service.data.volume ?? 0) : 0
 
-    implicitWidth: 108 * s
-    implicitHeight: 108 * s
+    implicitWidth: 120 * s
+    implicitHeight: 120 * s
     width: implicitWidth
     height: implicitHeight
     onMutedChanged: wave.requestPaint()
 
     Canvas {
         id: wave
-        anchors.fill: parent
+        width: 108 * root.s
+        height: 108 * root.s
+        anchors.centerIn: parent
         antialiasing: true
         onPaint: {
             const ctx = getContext("2d")

@@ -1,7 +1,7 @@
 {
   "id": "nothing-audio",
   "name": "Nothing Audio",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "author": "Ivan \u003c254410104+venchik111@users.noreply.github.com\u003e",
   "description": "Circular Nothing OS-style audio widget with mute control.",
   "license": "MIT",

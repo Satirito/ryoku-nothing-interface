@@ -14,11 +14,11 @@ Rectangle {
     readonly property bool charging: state.charging === true
     readonly property bool plugged: state.plugged === true
 
-    implicitWidth: 224 * s
-    implicitHeight: 224 * s
+    implicitWidth: 256 * s
+    implicitHeight: 256 * s
     width: implicitWidth
     height: implicitHeight
-    radius: 27 * s
+    radius: 32 * s
     color: "#1C1D21"
     onLevelChanged: ring.requestPaint()
 

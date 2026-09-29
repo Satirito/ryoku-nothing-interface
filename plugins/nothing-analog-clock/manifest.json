@@ -1,7 +1,7 @@
 {
   "id": "nothing-analog-clock",
   "name": "Nothing Analog Clock",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": "Ivan \u003c254410104+venchik111@users.noreply.github.com\u003e",
   "description": "Charcoal analog clock with fine white markers and one N-Red second hand.",
   "license": "MIT",

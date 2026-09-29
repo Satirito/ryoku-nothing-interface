@@ -1,22 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="420" height="420" viewBox="0 0 420 420" role="img" aria-label="Schematic Nothing Media widget without playback data">
-  <rect x="4" y="4" width="412" height="412" rx="38" fill="#1C1D21"/>
-  <circle cx="98" cy="102" r="65" fill="#303136"/>
-  <circle cx="98" cy="102" r="50" fill="none" stroke="#55565B" stroke-width="2"/>
-  <circle cx="98" cy="102" r="35" fill="none" stroke="#55565B" stroke-width="2"/>
-  <circle cx="98" cy="102" r="10" fill="#DCD7D2"/>
-  <rect x="190" y="53" width="169" height="12" rx="6" fill="#F5F5F5"/>
-  <rect x="190" y="77" width="129" height="12" rx="6" fill="#F5F5F5"/>
-  <rect x="190" y="111" width="91" height="8" rx="4" fill="#B1B3B3"/>
-  <rect x="190" y="146" width="70" height="6" rx="3" fill="#777980"/>
-  <circle cx="354" cy="147" r="22" fill="#303136"/>
-  <rect x="347" y="138" width="5" height="18" rx="2" fill="#F5F5F5"/>
-  <rect x="357" y="138" width="5" height="18" rx="2" fill="#F5F5F5"/>
-  <rect x="24" y="205" width="372" height="171" rx="24" fill="#303136"/>
-  <g fill="#C2C4CB">
-    <circle cx="173" cy="270" r="4"/><circle cx="185" cy="270" r="4"/><circle cx="197" cy="270" r="4"/><circle cx="209" cy="270" r="4"/><circle cx="221" cy="270" r="4"/><circle cx="233" cy="270" r="4"/>
-    <circle cx="149" cy="287" r="4"/><circle cx="161" cy="287" r="4"/><circle cx="173" cy="287" r="4"/><circle cx="185" cy="287" r="4"/><circle cx="197" cy="287" r="4"/><circle cx="209" cy="287" r="4"/><circle cx="221" cy="287" r="4"/><circle cx="233" cy="287" r="4"/><circle cx="245" cy="287" r="4"/><circle cx="257" cy="287" r="4"/>
-    <circle cx="179" cy="304" r="4"/><circle cx="191" cy="304" r="4"/><circle cx="203" cy="304" r="4"/><circle cx="215" cy="304" r="4"/><circle cx="227" cy="304" r="4"/>
-  </g>
-  <rect x="26" y="393" width="368" height="4" rx="2" fill="#55565B"/>
-  <rect x="26" y="393" width="115" height="4" rx="2" fill="#F5F5F5"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="392" height="256" viewBox="0 0 392 256" role="img" aria-label="Schematic rectangular Nothing Media widget without playback data">
+  <rect width="392" height="256" rx="28" fill="#1C1D21"/>
+  <circle cx="72" cy="72" r="54" fill="#303136"/>
+  <circle cx="72" cy="72" r="40" fill="none" stroke="#515258" stroke-width="1.5"/>
+  <circle cx="72" cy="72" r="29" fill="none" stroke="#515258" stroke-width="1.5"/>
+  <circle cx="72" cy="72" r="18" fill="none" stroke="#515258" stroke-width="1.5"/>
+  <circle cx="72" cy="72" r="6" fill="#DCD7D2"/>
+  <rect x="142" y="24" width="174" height="12" rx="6" fill="#F5F5F5"/>
+  <rect x="142" y="44" width="123" height="12" rx="6" fill="#F5F5F5"/>
+  <rect x="142" y="77" width="113" height="8" rx="4" fill="#B1B3B3"/>
+  <rect x="142" y="108" width="83" height="7" rx="3.5" fill="#777980"/>
+  <circle cx="356" cy="109" r="18" fill="#303136"/>
+  <path d="M350 100v18m11-18v18" stroke="#F5F5F5" stroke-width="4" stroke-linecap="round"/>
+  <rect x="18" y="143" width="356" height="76" rx="18" fill="#303136"/>
+  <rect x="34" y="159" width="178" height="6" rx="3" fill="#777980"/>
+  <rect x="34" y="172" width="274" height="10" rx="5" fill="#F5F5F5"/>
+  <rect x="34" y="190" width="226" height="6" rx="3" fill="#B1B3B3"/>
+  <rect x="18" y="238" width="356" height="3" rx="1.5" fill="#4B4C52"/>
+  <rect x="18" y="238" width="104" height="3" rx="1.5" fill="#DCD7D2"/>
 </svg>

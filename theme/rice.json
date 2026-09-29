@@ -110,7 +110,10 @@
       "clockScale": 1.15,
       "widgetFont": "Noto Sans",
       "statsEnabled": false,
-      "musicEnabled": false
+      "musicEnabled": false,
+      "clockAnchor": "free",
+      "clockX": 104,
+      "clockY": 96
     }
   }
 }

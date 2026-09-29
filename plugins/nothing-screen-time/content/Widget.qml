@@ -17,8 +17,8 @@ Rectangle {
         ? String(hours) + "h" + String(minutes).padStart(2, "0") + "m"
         : String(minutes).padStart(2, "0") + "m"
 
-    implicitWidth: 236 * s
-    implicitHeight: 88 * s
+    implicitWidth: 256 * s
+    implicitHeight: 120 * s
     width: implicitWidth
     height: implicitHeight
     radius: height / 2

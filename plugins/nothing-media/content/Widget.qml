@@ -15,6 +15,7 @@ Rectangle {
     readonly property bool playing: state.playing === true
     readonly property string titleText: available ? (state.title || "Музыка") : "Ничего не играет"
     readonly property string artistText: available ? (state.artist || " ") : " "
+    readonly property string artUrl: available ? String(state.artUrl || "") : ""
     readonly property real position: Number(state.position || 0)
     readonly property real length: Number(state.length || 0)
     readonly property bool lyricsMatch: available && String(frame.title || "")
@@ -42,51 +43,66 @@ Rectangle {
         return String(Math.floor(n / 60)) + ":" + String(n % 60).padStart(2, "0")
     }
 
-    implicitWidth: 320 * s
-    implicitHeight: 320 * s
+    // Three columns by two rows of the desktop grid.
+    implicitWidth: 392 * s
+    implicitHeight: 256 * s
     width: implicitWidth
     height: implicitHeight
-    radius: 32 * s
+    radius: 28 * s
     color: "#1C1D21"
 
     Canvas {
-        x: 16 * root.s
-        y: 16 * root.s
-        width: 132 * root.s
-        height: 132 * root.s
+        x: 18 * root.s
+        y: 18 * root.s
+        width: 108 * root.s
+        height: 108 * root.s
         antialiasing: true
         onPaint: {
             const c = getContext("2d")
             c.clearRect(0, 0, width, height)
             c.save()
             c.scale(root.s, root.s)
-            c.beginPath(); c.arc(66, 66, 62, 0, Math.PI * 2)
+            c.beginPath(); c.arc(54, 54, 52, 0, Math.PI * 2)
             c.fillStyle = "#303136"; c.fill()
             c.strokeStyle = "#515258"; c.lineWidth = 1.5
-            for (const r of [48, 35, 22]) {
-                c.beginPath(); c.arc(66, 66, r, 0, Math.PI * 2); c.stroke()
+            for (const r of [40, 29, 18]) {
+                c.beginPath(); c.arc(54, 54, r, 0, Math.PI * 2); c.stroke()
             }
-            c.beginPath(); c.arc(66, 66, 7, 0, Math.PI * 2)
+            c.beginPath(); c.arc(54, 54, 6, 0, Math.PI * 2)
             c.fillStyle = "#DCD7D2"; c.fill()
             c.restore()
         }
     }
 
+    // Album artwork fills the cover slot; the record remains as a fallback.
+    Image {
+        id: albumArt
+        x: 18 * root.s
+        y: 18 * root.s
+        width: 108 * root.s
+        height: 108 * root.s
+        source: root.artUrl
+        fillMode: Image.PreserveAspectCrop
+        asynchronous: true
+        cache: true
+        visible: root.available && status === Image.Ready
+    }
+
     Text {
-        x: 157 * root.s; y: 20 * root.s
-        width: 146 * root.s; height: 58 * root.s
+        x: 142 * root.s; y: 19 * root.s
+        width: 230 * root.s; height: 52 * root.s
         text: root.titleText
         color: "#F5F5F5"
         font.family: "Noto Sans"
         font.pixelSize: 16 * root.s
         font.weight: Font.Medium
         wrapMode: Text.WordWrap
-        maximumLineCount: 3
+        maximumLineCount: 2
         elide: Text.ElideRight
     }
     Text {
-        x: 157 * root.s; y: 85 * root.s
-        width: 146 * root.s
+        x: 142 * root.s; y: 74 * root.s
+        width: 183 * root.s
         text: root.artistText
         color: "#B1B3B3"
         font.family: "Noto Sans"
@@ -94,7 +110,7 @@ Rectangle {
         elide: Text.ElideRight
     }
     Text {
-        x: 157 * root.s; y: 117 * root.s
+        x: 142 * root.s; y: 105 * root.s
         text: root.available ? root.stamp(root.position) + " / " + root.stamp(root.length) : ""
         color: "#B1B3B3"
         font.family: "Noto Sans"
@@ -102,7 +118,7 @@ Rectangle {
     }
     Rectangle {
         id: playButton
-        x: 269 * root.s; y: 109 * root.s
+        x: 338 * root.s; y: 91 * root.s
         width: 36 * root.s; height: 36 * root.s
         radius: width / 2
         color: "#303136"
@@ -136,30 +152,30 @@ Rectangle {
 
     Rectangle {
         id: lyricPlate
-        x: 16 * root.s; y: 158 * root.s
-        width: 288 * root.s; height: 120 * root.s
-        radius: 20 * root.s
+        x: 18 * root.s; y: 143 * root.s
+        width: 356 * root.s; height: 76 * root.s
+        radius: 18 * root.s
         color: "#303136"
         clip: true
 
         Column {
             visible: root.syncedLines.length > 0
-            x: 14 * root.s; y: 17 * root.s
+            x: 14 * root.s; y: 7 * root.s
             width: parent.width - 28 * root.s
-            spacing: 5 * root.s
+            spacing: 2 * root.s
             Text {
                 width: parent.width
                 visible: text.length > 0
                 text: root.lineAt(root.activeLine - 1)
                 color: "#B1B3B3"; opacity: 0.55
-                font.family: "Noto Sans"; font.pixelSize: 12 * root.s
+                font.family: "Noto Sans"; font.pixelSize: 11 * root.s
                 elide: Text.ElideRight
             }
             Text {
                 width: parent.width
                 text: root.lineAt(root.activeLine)
                 color: "#F5F5F5"
-                font.family: "Noto Sans"; font.pixelSize: 15 * root.s
+                font.family: "Noto Sans"; font.pixelSize: 14 * root.s
                 font.weight: Font.Medium
                 wrapMode: Text.WordWrap
                 maximumLineCount: 2
@@ -170,18 +186,18 @@ Rectangle {
                 visible: text.length > 0
                 text: root.lineAt(root.activeLine + 1)
                 color: "#B1B3B3"; opacity: 0.7
-                font.family: "Noto Sans"; font.pixelSize: 12 * root.s
+                font.family: "Noto Sans"; font.pixelSize: 11 * root.s
                 elide: Text.ElideRight
             }
         }
         Text {
             visible: root.plainLines.length > 0 && root.syncedLines.length === 0
-            x: 14 * root.s; y: 15 * root.s
+            x: 14 * root.s; y: 8 * root.s
             width: parent.width - 28 * root.s
-            height: parent.height - 30 * root.s
-            text: root.plainLines.slice(0, 4).join("\n")
+            height: parent.height - 16 * root.s
+            text: root.plainLines.slice(0, 3).join("\n")
             color: "#F5F5F5"
-            font.family: "Noto Sans"; font.pixelSize: 13 * root.s
+            font.family: "Noto Sans"; font.pixelSize: 12 * root.s
             wrapMode: Text.WordWrap
             elide: Text.ElideRight
         }
@@ -200,8 +216,8 @@ Rectangle {
     }
 
     Rectangle {
-        x: 18 * root.s; y: 294 * root.s
-        width: 284 * root.s; height: 3 * root.s
+        x: 18 * root.s; y: 238 * root.s
+        width: 356 * root.s; height: 3 * root.s
         radius: height / 2
         color: "#4B4C52"
         Rectangle {
