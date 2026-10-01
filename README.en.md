@@ -2,7 +2,7 @@
 
 **Charcoal surfaces. Dot-matrix clock. Island bar.** An unofficial [Ryoku](https://ryoku.dev) theme inspired by Nothing OS. [Русский README](README.md).
 
-No wallpaper or proprietary Nothing font files are bundled.
+The theme leaves your wallpaper unchanged. An [optional set of six AI-generated 16:9 wallpapers](wallpapers/README.md) is available separately in this repository. These are unofficial adaptations of the phone-sized Connected Collection artwork, not official Nothing desktop wallpapers. Proprietary Nothing font files are not bundled.
 
 ## Screenshots
 
@@ -68,6 +68,6 @@ The media tile reads local MPRIS metadata and Ryoku's lyrics feed. It fills the 
 
 ## Fonts, wallpaper and license
 
-The main font is **Noto Sans**; large dotted digits are drawn in QML. Optional NType 82 files can be obtained from the [Nothing community brand reference](https://nothing.wiki/nothing/brand_reference). Nothing's fonts and wallpapers are not redistributed here. [Nothing's Launcher Beta post](https://nothing.community/d/617-a-glimpse-of-nothing-os-nothing-launcher-beta-is-here) links to a wallpaper pack if you want one.
+The main font is **Noto Sans**; large dotted digits are drawn in QML. Optional NType 82 files can be obtained from the [Nothing community brand reference](https://nothing.wiki/nothing/brand_reference). Nothing's original font files and phone wallpapers are not redistributed here. You can add the [optional AI-generated widescreen wallpapers](wallpapers/README.md) to Ryoku's wallpaper picker. [Nothing's Launcher Beta post](https://nothing.community/d/617-a-glimpse-of-nothing-os-nothing-launcher-beta-is-here) links to a different original wallpaper pack.
 
-This is an independent fan project, unaffiliated with Nothing Technology Limited. Original plugins, preset and assets are [MIT licensed](LICENSE). The QML adaptations retain their upstream Ryoku licenses; see [NOTICE.md](NOTICE.md). Nothing trademarks, fonts and wallpapers belong to their respective owners.
+This is an independent fan project, unaffiliated with Nothing Technology Limited. Original plugins, preset and documentation are [MIT licensed](LICENSE). The QML adaptations retain their upstream Ryoku licenses. The optional AI-generated wallpapers are based on third-party artwork and **are not covered by the repository's MIT license**; see [NOTICE.md](NOTICE.md) for attribution. Nothing trademarks and original artwork belong to their respective owners.
