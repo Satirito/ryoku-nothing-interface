@@ -2,7 +2,6 @@ import QtQuick
 import QtQuick.Window
 import SddmComponents 2.0
 import "i18n"
-import "i18n"
 
 Rectangle {
     id: root
@@ -57,6 +56,17 @@ Rectangle {
             password.forceActiveFocus()
         }
     }
+    // Input Focus — defer to ensure the greeter has settled before stealing focus
+    Timer {
+        id: focusTimer
+        interval: 300
+        running: true
+        onTriggered: {
+            if (typeof password !== "undefined")
+                password.forceActiveFocus()
+        }
+    }
+
     Component.onCompleted: {
         if (typeof password !== "undefined")
             password.forceActiveFocus()
