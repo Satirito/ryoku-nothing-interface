@@ -17,7 +17,7 @@ def run(argv):
 players = run(['playerctl', '-l']).splitlines()
 if not players:
     print(json.dumps({
-        'playing': False, 'available': False, 'title': '', 'artist': '',
+        'player': '', 'playing': False, 'available': False, 'title': '', 'artist': '',
         'artUrl': '', 'position': 0.0, 'length': 0.0
     }, ensure_ascii=False))
     raise SystemExit(0)
@@ -55,6 +55,7 @@ except ValueError:
     length = 0.0
 
 print(json.dumps({
+    'player': active_player,
     'playing': status == 'Playing',
     'available': status in ('Playing', 'Paused'),
     'title': lines[0][:80] if lines else '',

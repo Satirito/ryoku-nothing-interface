@@ -67,13 +67,6 @@ Rectangle {
         }
     }
 
-    Component.onCompleted: {
-        if (typeof password !== "undefined")
-            password.forceActiveFocus()
-        else
-            Qt.callLater(() => password.forceActiveFocus())
-    }
-
     Image {
         anchors.fill: parent
         visible: root.live && root.live.wallpaperUrl.length > 0
@@ -105,7 +98,7 @@ Rectangle {
 
         Text {
             x: 0; y: -43
-            text: Qt.formatDate(root.now, "dddd, d MMMM")
+            text: Qt.locale().toString(root.now, "dddd, d MMMM")
             font.family: "Noto Sans"; font.pixelSize: 20
             color: "#F5F5F5"
         }

@@ -17,40 +17,32 @@
       "source": "PROVENANCE.txt",
       "destination": "PROVENANCE.txt",
       "mode": "0644",
-      "size": 988,
-      "sha256": "9cf4b869099194b70802904404df29a3deb556bc654f10e58f8ec70e68178b5e",
+      "size": 559,
+      "sha256": "d5e8b4b288bef694f5f173dc14c59cc5490d842d8b42bdf8d69904228f7a8f7e",
       "install": true
     },
     {
       "source": "README.md",
       "destination": "README.md",
       "mode": "0644",
-      "size": 1295,
-      "sha256": "3bf3b41d5a6307a34c43b5c5a9c8edf2031e885488d4de606b8291589aaccfca",
+      "size": 1109,
+      "sha256": "7de39ebf51116d738bb42ce808f2cc7d90e13512a3ac6aae96d31fb2692d1670",
       "install": true
-    },
-    {
-      "source": "assets/preview.png",
-      "destination": "preview.png",
-      "mode": "0644",
-      "size": 1676418,
-      "sha256": "28e3ab81506920d45dfe562a574c489754e9a2070abc7608d839beb565c0ca02",
-      "install": false
     },
     {
       "source": "Main.qml",
       "destination": "Main.qml",
       "mode": "0644",
-      "size": 13871,
-      "sha256": "fc83716fe816a1937814e806b96e39ab89d1db9d4e828fbdbcacdcaf45a317f6",
+      "size": 13684,
+      "sha256": "f8173b5471b5db41b73b0a132b2dca8bfd2e85266c91dd2a73ca1c14e636a3c8",
       "install": true
     },
     {
       "source": "LiveData.qml",
       "destination": "LiveData.qml",
       "mode": "0644",
-      "size": 3567,
-      "sha256": "418948536ec2a38892f7703e2488b5e0f2d0a4ae62b0834b14d3e24a03d28ba9",
+      "size": 3649,
+      "sha256": "b64591a4d401a4d6cf19f9013a37876bccf496cf1531b7fb09728ff2d5aebcbb",
       "install": true
     },
     {
@@ -73,8 +65,8 @@
       "source": "bin/media.py",
       "destination": "bin/media.py",
       "mode": "0755",
-      "size": 1605,
-      "sha256": "c865ef19921d1e432a0f75931277c36121a8f42d6d008fa95fb869808cbd6b38",
+      "size": 1945,
+      "sha256": "5ea89e6fb6b6fdd06f8d7ad23a0c4879f4e95a8bd5d7a6fad6b74beca57ddcb3",
       "install": true
     },
     {
@@ -89,8 +81,8 @@
       "source": "i18n/I18n.qml",
       "destination": "i18n/I18n.qml",
       "mode": "0644",
-      "size": 2509,
-      "sha256": "80b3727d444692e1a22f0cdb1679f93f1636322926c788406392cbd320d35bf1",
+      "size": 2510,
+      "sha256": "f48db37964039c4db6151816f9765e8eb091be81ae5687593a35d9301f0f97a4",
       "install": true
     },
     {
